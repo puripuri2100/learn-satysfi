@@ -1,0 +1,10 @@
+[book]
+authors = ["puripuri2100"]
+language = "ja"
+multilingual = false
+src = "src"
+title = "SATySFi Documents"
+git-repository-url = "https://github.com/puripuri2100/learn-satysfi"
+
+[output.html]
+mathjax-support = true
