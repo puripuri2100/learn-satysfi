@@ -2,6 +2,8 @@
 
 議論をして品質を向上させていきたいので、積極的なIssueやプルリクをお待ちしています。
 
+Rust製の[mdBook](https://github.com/rust-lang/mdBook)というソフトウェアを使用しています。
+
 # 中身の予定
 
 - [x] [まえがき](src/chapter1/chapter_1.md)
