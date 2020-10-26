@@ -16,7 +16,7 @@ Rust製の[mdBook](https://github.com/rust-lang/mdBook)というソフトウェ�
     - [x] [リリースされているv0.0.4をインストールする](src/chapter3/install_satysfi_at_0.0.4.md)
     - [x] [docker imageを使う](src/chapter3/use_docker.md)
     - [x] [ブラウザを使う](src/chapter3/use_browser.md)
-  -[x]  [Hello SATySFi!](src/chapter3/hello_satysfi.md)
+  - [x] [Hello SATySFi!](src/chapter3/hello_satysfi.md)
 - [x] [SATySFiで文書を書く](src/chapter4/chapter_4.md)
   - [x] [コメントアウト](src/chapter4/comment_out.md)
   - [x] [パッケージの読み込み・インストール](src/chapter4/import_package.md)
