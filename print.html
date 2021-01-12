@@ -1,0 +1,588 @@
+<!DOCTYPE HTML>
+<html lang="ja" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>SATySFi Documents</title>
+        
+        <meta name="robots" content="noindex" />
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="chapter1/chapter_1.html"><strong aria-hidden="true">1.</strong> まえがき</a></li><li class="chapter-item expanded "><a href="chapter2/chapter_2.html"><strong aria-hidden="true">2.</strong> 導入</a></li><li class="chapter-item expanded "><a href="chapter3/chapter_3.html"><strong aria-hidden="true">3.</strong> SATySFiを始める</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter3/install_satyrographos.html"><strong aria-hidden="true">3.1.</strong> satyrographosをインストールする</a></li><li class="chapter-item expanded "><a href="chapter3/install_satysfi.html"><strong aria-hidden="true">3.2.</strong> SATySFiをインストールする</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter3/install_satysfi_by_satyrographos.html"><strong aria-hidden="true">3.2.1.</strong> satyrographosでインストールする</a></li><li class="chapter-item expanded "><a href="chapter3/install_satysfi_at_HEAD.html"><strong aria-hidden="true">3.2.2.</strong> HEAD版をインストールする</a></li><li class="chapter-item expanded "><a href="chapter3/install_satysfi_at_0.0.4.html"><strong aria-hidden="true">3.2.3.</strong> リリースされているv0.0.4をインストールする</a></li><li class="chapter-item expanded "><a href="chapter3/use_docker.html"><strong aria-hidden="true">3.2.4.</strong> docker imageを使う</a></li><li class="chapter-item expanded "><a href="chapter3/use_browser.html"><strong aria-hidden="true">3.2.5.</strong> ブラウザを使う</a></li></ol></li><li class="chapter-item expanded "><a href="chapter3/hello_satysfi.html"><strong aria-hidden="true">3.3.</strong> Hello SATySFi!</a></li></ol></li><li class="chapter-item expanded "><a href="chapter4/chapter_4.html"><strong aria-hidden="true">4.</strong> SATySFiで文書を書く</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter4/comment_out.html"><strong aria-hidden="true">4.1.</strong> コメントアウト</a></li><li class="chapter-item expanded "><a href="chapter4/import_package.html"><strong aria-hidden="true">4.2.</strong> パッケージの読み込み・インストール</a></li><li class="chapter-item expanded "><a href="chapter4/document_structure.html"><strong aria-hidden="true">4.3.</strong> 文書構造の記述</a></li><li class="chapter-item expanded "><a href="chapter4/command.html"><strong aria-hidden="true">4.4.</strong> コマンドの記述</a></li><li class="chapter-item expanded "><a href="chapter4/introduction_inlinecommand_blockcommand.html"><strong aria-hidden="true">4.5.</strong> インラインコマンド・ブロックコマンドの紹介</a></li><li class="chapter-item expanded "><a href="chapter4/math_in_inline.html"><strong aria-hidden="true">4.6.</strong> 文中数式</a></li><li class="chapter-item expanded "><a href="chapter4/math_in_block.html"><strong aria-hidden="true">4.7.</strong> 別行建て数式</a></li><li class="chapter-item expanded "><a href="chapter4/introduction_mathcommand.html"><strong aria-hidden="true">4.8.</strong> 数学コマンドの紹介</a></li><li class="chapter-item expanded "><a href="chapter4/itemize.html"><strong aria-hidden="true">4.9.</strong> 箇条書き</a></li><li class="chapter-item expanded "><a href="chapter4/footnote.html"><strong aria-hidden="true">4.10.</strong> 脚注</a></li><li class="chapter-item expanded "><a href="chapter4/ref.html"><strong aria-hidden="true">4.11.</strong> 相互参照</a></li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">5.</strong> SATySFiでプログラミングをする</li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">5.1.</strong> 簡単なコマンド定義</li><li class="chapter-item expanded "><strong aria-hidden="true">5.2.</strong> 基本的な値</li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">5.2.1.</strong> 整数と小数</li><li class="chapter-item expanded "><strong aria-hidden="true">5.2.2.</strong> 長さ</li><li class="chapter-item expanded "><strong aria-hidden="true">5.2.3.</strong> 真偽値</li><li class="chapter-item expanded "><strong aria-hidden="true">5.2.4.</strong> 文字列</li><li class="chapter-item expanded "><strong aria-hidden="true">5.2.5.</strong> タプル</li><li class="chapter-item expanded "><strong aria-hidden="true">5.2.6.</strong> データ構造</li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">5.3.</strong> 変数と束縛</li><li class="chapter-item expanded "><strong aria-hidden="true">5.4.</strong> 簡単な型システム</li><li class="chapter-item expanded "><strong aria-hidden="true">5.5.</strong> エラーメッセージを読む</li><li class="chapter-item expanded "><strong aria-hidden="true">5.6.</strong> 破壊的代入</li><li class="chapter-item expanded "><strong aria-hidden="true">5.7.</strong> 関数定義</li><li class="chapter-item expanded "><strong aria-hidden="true">5.8.</strong> 制御フロー</li><li class="chapter-item expanded "><strong aria-hidden="true">5.9.</strong> 代数的データ型</li><li class="chapter-item expanded "><strong aria-hidden="true">5.10.</strong> パターンマッチ</li><li class="chapter-item expanded "><strong aria-hidden="true">5.11.</strong> 再帰関数</li><li class="chapter-item expanded "><strong aria-hidden="true">5.12.</strong> レコード</li><li class="chapter-item expanded "><strong aria-hidden="true">5.13.</strong> プリミティブの紹介</li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">5.13.1.</strong> 数値計算</li><li class="chapter-item expanded "><strong aria-hidden="true">5.13.2.</strong> 文字列処理</li></ol></li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">6.</strong> 文書が処理される仕組み</li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">6.1.</strong> フロントエンド</li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">6.1.1.</strong> 字句解析器</li><li class="chapter-item expanded "><strong aria-hidden="true">6.1.2.</strong> 構文解析器</li><li class="chapter-item expanded "><strong aria-hidden="true">6.1.3.</strong> 型検査器</li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">6.2.</strong> バックエンド</li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">6.2.1.</strong> インラインテキストからインラインボックスへ</li><li class="chapter-item expanded "><strong aria-hidden="true">6.2.2.</strong> 行分割処理</li><li class="chapter-item expanded "><strong aria-hidden="true">6.2.3.</strong> ページ分割処理</li><li class="chapter-item expanded "><strong aria-hidden="true">6.2.4.</strong> 関連するプリミティブ</li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">6.2.4.1.</strong> 長さを取得する</li><li class="chapter-item expanded "><strong aria-hidden="true">6.2.4.2.</strong> 行分割箇所とペナルティ</li><li class="chapter-item expanded "><strong aria-hidden="true">6.2.4.3.</strong> グルーの制御</li><li class="chapter-item expanded "><strong aria-hidden="true">6.2.4.4.</strong> ブロック方向の制御</li><li class="chapter-item expanded "><strong aria-hidden="true">6.2.4.5.</strong> ブロックとインラインを混ぜる</li><li class="chapter-item expanded "><strong aria-hidden="true">6.2.4.6.</strong> 相互参照</li></ol></li></ol></li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">7.</strong> インラインとブロックに関する高度なコマンド定義</li><li class="chapter-item expanded "><strong aria-hidden="true">8.</strong> グラフィックス</li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">8.1.</strong> パスの作成</li><li class="chapter-item expanded "><strong aria-hidden="true">8.2.</strong> パスからグラフィックスへ</li><li class="chapter-item expanded "><strong aria-hidden="true">8.3.</strong> 囲み枠</li><li class="chapter-item expanded "><strong aria-hidden="true">8.4.</strong> 画像</li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">9.</strong> 数式</li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">9.1.</strong> 数式に関する構文</li><li class="chapter-item expanded "><strong aria-hidden="true">9.2.</strong> 数式コマンドの定義</li><li class="chapter-item expanded "><strong aria-hidden="true">9.3.</strong> 括弧の描画</li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">10.</strong> 設定ファイル</li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">10.1.</strong> フォント設定</li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">11.</strong> 特殊な機能</li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">11.1.</strong> デバッグオプション</li><li class="chapter-item expanded "><strong aria-hidden="true">11.2.</strong> マークダウンファイルを処理する</li><li class="chapter-item expanded "><strong aria-hidden="true">11.3.</strong> テキストモード</li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">12.</strong> パッケージを作ってみる</li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">12.1.</strong> モジュールの作成</li><li class="chapter-item expanded "><strong aria-hidden="true">12.2.</strong> デバッグ</li><li class="chapter-item expanded "><strong aria-hidden="true">12.3.</strong> satyrographosへの登録</li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">13.</strong> クラスファイルを作成する</li><li><ol class="section"><li class="chapter-item expanded "><strong aria-hidden="true">13.1.</strong> 基本関数の作成</li><li class="chapter-item expanded "><strong aria-hidden="true">13.2.</strong> フォントの設定</li><li class="chapter-item expanded "><strong aria-hidden="true">13.3.</strong> 基本文脈の作成</li><li class="chapter-item expanded "><strong aria-hidden="true">13.4.</strong> ドキュメント関数を作成する</li><li class="chapter-item expanded "><strong aria-hidden="true">13.5.</strong> タイトル部分を作る</li><li class="chapter-item expanded "><strong aria-hidden="true">13.6.</strong> 目次を作る</li><li class="chapter-item expanded "><strong aria-hidden="true">13.7.</strong> PDFアウトラインを作成する</li><li class="chapter-item expanded "><strong aria-hidden="true">13.8.</strong> 文書を書くためのコマンドの作成</li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">14.</strong> SATySFiに関する資料</li><li class="chapter-item expanded "><strong aria-hidden="true">15.</strong> SATySFiのコミュニティ</li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">SATySFi Documents</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#まえがき" id="まえがき">まえがき</a></h1>
+<p><a href="https://github.com/gfngfn/SATySFi">SATySFi</a>はいいぞ</p>
+<h1><a class="header" href="#導入" id="導入">導入</a></h1>
+<p>これはSATySFiに関する入門書です。</p>
+<h1><a class="header" href="#satysfiを始める" id="satysfiを始める">SATySFiを始める</a></h1>
+<p>SATySFiを始めましょう！この章では</p>
+<ul>
+<li><code>satyrographos</code>というライブラリマネージャを使う</li>
+<li>SATySFiを実行できる環境を整える</li>
+<li><code>Hello world</code>と書かれたPDFファイルを出力する</li>
+</ul>
+<p>という3つのことについて説明します。</p>
+<h1><a class="header" href="#satyrographosをインストールする" id="satyrographosをインストールする">satyrographosをインストールする</a></h1>
+<p>@na4zagin3氏によってsatyrographosというSATySFiのパッケージマネージャが開発されています（日本語読みは「サテュログラポ̣ス」です）。
+多数のパッケージがsatyrographosに登録されているばかりか、SATySFi自体もサポートしているため、satyrographosをインストールすることをオススメします。</p>
+<p>まだ必要が無いと思う方は先に進み、必要になった時点でこの説明に帰ってくるのが良いでしょう。</p>
+<p>satyrographosはまだ開発途中であるため、一部のコマンドラインインターフェースが予告なく変更される可能性があります。ドキュメントや表示をよく読むようにしてください。</p>
+<p>GitHubのリポジトリは<a href="https://github.com/na4zagin3/satyrographos">na4zagin3/satyrographos</a>にあります。</p>
+<p>OCamlによって記述され、OPAMによって管理されているライブラリを使用しているため、どちらもインストールする必要があります。
+また、OPAMはWindowsとの相性が悪いため、WindowsでインストールするためにはWindows Subsystem for Linux(WSL)やCygwinなどを使う必要があります。
+以下の説明では*nix環境があるという前提で説明をします。</p>
+<h2><a class="header" href="#インストールするための環境を整える" id="インストールするための環境を整える">インストールするための環境を整える</a></h2>
+<p>上に説明している通り、Windows使用者はWSLやCygwinを事前にインストールしてください。</p>
+<h3><a class="header" href="#opamのインストール" id="opamのインストール">OPAMのインストール</a></h3>
+<p><a href="https://opam.ocaml.org/doc/Install.html">OPAMのドキュメント</a>が存在しますが、ここでは必要な分だけ説明します。</p>
+<h4><a class="header" href="#ubuntu1804以降" id="ubuntu1804以降">Ubuntu18.04以降</a></h4>
+<p>ppaが用意されているのでこれを用います。</p>
+<pre><code class="language-sh">sudo add-apt-repository ppa:avsm/ppa
+sudo apt update
+sudo apt install opam
+</code></pre>
+<h4><a class="header" href="#ubuntu1804以前" id="ubuntu1804以前">Ubuntu18.04以前</a></h4>
+<p>バイナリを直接インストールします。OCaml本体のインストールに必要なソフトウェアもついでにインストールします。</p>
+<pre><code class="language-sh">sudo apt-get update
+sudo apt-get install build-essential git m4 unzip curl
+sh &lt;(curl -sL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)
+</code></pre>
+<h4><a class="header" href="#macos" id="macos">macOS</a></h4>
+<p>Homebrewを使います。</p>
+<pre><code class="language-sh">brew install gpatch
+brew install opam
+</code></pre>
+<h3><a class="header" href="#ocamlのインストール" id="ocamlのインストール">OCamlのインストール</a></h3>
+<p>インストールしたOPAMを使ってOCamlをインストールします。</p>
+<p>一部のOSでは<code>sandbox</code>という機能が使えないらしいので、インストール時に<code>--disable-sandboxing</code>オプションが必要となります。詳しくは<a href="https://opam.ocaml.org/doc/FAQ.html#Why-does-opam-require-bwrap">FAQ</a>を見てください。
+この現象は少なくともWSL1では確認されていますので、WSL1を使用している人は必ずこのオプションを付けてください。WSL2では不要という情報もあります。それ以外の主要なOSでは必要ないはずです。
+このオプションが必要なOSで<code>--disable-sandboxing</code>オプションを付けないでインストールしようとすると、FAQへのリンクの付いたエラーが出るのでわかりやすいと思います。</p>
+<p>インストールするOCamlのバージョンは、執筆している2020年6月時点では最新版の4.10.0です。
+SATySFiやsatyrographosのREADMEを読んで必要なバージョンを確かめてください。</p>
+<h4><a class="header" href="#wslなど" id="wslなど">WSLなど</a></h4>
+<pre><code class="language-sh">opam init --comp 4.10.0 --disable-sandboxing
+eval $(opam env)
+</code></pre>
+<h4><a class="header" href="#それ以外" id="それ以外">それ以外</a></h4>
+<pre><code class="language-sh">opam init --comp 4.10.0
+eval $(opam env)
+</code></pre>
+<h2><a class="header" href="#外部リポジトリを登録する" id="外部リポジトリを登録する">外部リポジトリを登録する</a></h2>
+<p>SATySFiもsatyrographosも外部リポジトリを使って独自のライブラリを利用します。
+ですので、これを登録します。</p>
+<pre><code>opam repository add satysfi-external https://github.com/gfngfn/satysfi-external-repo.git
+
+opam repository add satyrographos-repo https://github.com/na4zagin3/satyrographos-repo.git
+
+opam update
+</code></pre>
+<h2><a class="header" href="#本体をインストールする" id="本体をインストールする">本体をインストールする</a></h2>
+<p>satyrographos本体はOPAMに登録されているため、すぐにインストールすることができます。</p>
+<pre><code>opam install satyrographos
+</code></pre>
+<h1><a class="header" href="#インストール" id="インストール">インストール</a></h1>
+<p>SATySFiを使える環境を整える方法はいくつかあります。
+以下の説明を読んで自分にあったものを選んでみてください。</p>
+<ul>
+<li><code>satyrographos</code>でインストールする：様々なバージョンを簡単にインストールできます。</li>
+<li>SATySFiのリポジトリのmasterブランチのHEAD版をインストールする：最新の機能や開発版の機能を使うことができますが、情報は少なくなります。</li>
+<li>SATySFiのv0.0.4をインストールする：挙動が固定され、それなりに新しい機能を使うことができます。</li>
+<li>docker imageを使う：様々な環境で様々なバージョンを使うことができますが、Dockerの環境構築が必要です。</li>
+<li>ブラウザで使う：色々な環境で使えます。</li>
+</ul>
+<p>個人的には、SATySFiを単に使いたいだけの人は<code>satyrographos</code>を使ってインストールするのが良いと思います。</p>
+<h1><a class="header" href="#satyrographosでインストールする" id="satyrographosでインストールする">satyrographosでインストールする</a></h1>
+<p><code>satyrographos</code>をインストールした後に</p>
+<pre><code class="language-sh">opam depext satysfi satysfi-dist
+opam install satysfi satysfi-dist
+satyrographos install
+</code></pre>
+<p>とすることでインストールが完了します。</p>
+<pre><code>satysfi --version
+</code></pre>
+<p>でインストールとバージョンを確認することができます。</p>
+<h1><a class="header" href="#satysfiのhead版をインストールする" id="satysfiのhead版をインストールする">SATySFiのHEAD版をインストールする</a></h1>
+<p>GitHubのリポジトリのHEAD版をインストールします。</p>
+<h2><a class="header" href="#環境構築" id="環境構築">環境構築</a></h2>
+<p>OPAMとOCamlがインストールされている必要があります。
+satyrographosをインストールしていれば環境は自動で整っています。
+もし、インストールしていないのであれば、「satyrographosをインストールする」を読んでOPAMとOCamlをインストールしてください。</p>
+<h2><a class="header" href="#リポジトリをクローンする" id="リポジトリをクローンする">リポジトリをクローンする</a></h2>
+<p>GitHubにあるリポジトリを丸ごとクローンしてきます。</p>
+<pre><code class="language-sh">git clone https://github.com/gfngfn/SATySFi.git
+</code></pre>
+<h2><a class="header" href="#satysfiをビルドする" id="satysfiをビルドする">SATySFiをビルドする</a></h2>
+<p>クローンしてきたSATySFiフォルダに移動し、OPAMを使ってインストールします。
+必要なライブラリは自動でインストールされます。</p>
+<pre><code class="language-sh">cd SATySFi
+
+opam pin add satysfi .
+opam install satysfi
+</code></pre>
+<h2><a class="header" href="#フォントや標準ライブラリをインストールする" id="フォントや標準ライブラリをインストールする">フォントや標準ライブラリをインストールする</a></h2>
+<p>フォントのインストールと標準ライブラリのインストールはそれぞれ別々のシェルスクリプトに分離されています。</p>
+<p><code>install-libs.sh</code>の実行には管理者権限が必要です。</p>
+<pre><code>./download-fonts.sh
+sudo ./install-libs.sh
+</code></pre>
+<h1><a class="header" href="#satysfiのv004をインストールする" id="satysfiのv004をインストールする">SATySFiのv0.0.4をインストールする</a></h1>
+<p>GitHubのリポジトリでリリースされているv0.0.4をインストールします。</p>
+<h2><a class="header" href="#環境構築-1" id="環境構築-1">環境構築</a></h2>
+<p>OPAMとOCamlがインストールされている必要があります。
+satyrographosをインストールしていれば環境は自動で整っています。
+もし、インストールしていないのであれば、「satyrographosをインストールする」を読んでOPAMとOCamlをインストールしてください。</p>
+<h2><a class="header" href="#リリースされているファイルをダウンロードする" id="リリースされているファイルをダウンロードする">リリースされているファイルをダウンロードする</a></h2>
+<p>リリースされているファイルをダウンロードし、展開します。</p>
+<pre><code class="language-sh">curl https://github.com/gfngfn/SATySFi/archive/v0.0.4.zip
+unzip v0.0.4.zip -d SATySFi
+</code></pre>
+<p>でSATySFiというフォルダが出来上がります。</p>
+<h2><a class="header" href="#satysfiをビルドする-1" id="satysfiをビルドする-1">SATySFiをビルドする</a></h2>
+<p>作成したSATySFiフォルダに移動し、OPAMを使ってインストールします。
+必要なライブラリは自動でインストールされます。</p>
+<pre><code class="language-sh">cd SATySFi
+
+opam pin add satysfi .
+opam install satysfi
+</code></pre>
+<h2><a class="header" href="#フォントや標準ライブラリをインストールする-1" id="フォントや標準ライブラリをインストールする-1">フォントや標準ライブラリをインストールする</a></h2>
+<p>フォントのインストールと標準ライブラリのインストールはそれぞれ別々のシェルスクリプトに分離されています。</p>
+<p><code>install-libs.sh</code>の実行には管理者権限が必要です。</p>
+<pre><code>./download-fonts.sh
+sudo ./install-libs.sh
+</code></pre>
+<h1><a class="header" href="#docker-imageを使う" id="docker-imageを使う">docker imageを使う</a></h1>
+<p>Dockerイメージが多くの人によって作成され、公開されています。
+ここでは@amutake氏によって作成されているsatysfi-dockerを紹介します。</p>
+<p>詳しくは「<a href="http://amutake.hatenablog.com/entry/2019/12/03/082528">satysfi-docker を使って SATySFi をお手軽に試す</a>」を読んでください。</p>
+<blockquote>
+<p><strong>note：</strong>
+筆者はDockerを使ったことがほとんどないので解説が書けていません。
+加筆してくれる方を募集しています。</p>
+</blockquote>
+<h1><a class="header" href="#ブラウザを使う" id="ブラウザを使う">ブラウザを使う</a></h1>
+<p>ブラウザでSATySFiを使える環境を整えてくださった方がいます。
+2020年6月現在、使えるサービスは以下の2つになります。</p>
+<ul>
+<li><a href="http://satysfi-playground.tech/">SATySFi playground</a> by @pandaman64</li>
+<li><a href="https://satysfi.ml/">satysfi.ml</a> by @theoremoon</li>
+</ul>
+<p>お好きな方をご利用ください。</p>
+<h1><a class="header" href="#hello-satysfi" id="hello-satysfi">Hello SATySFi!</a></h1>
+<p>一般的なプログラミング言語と同じように、<code>Hello SATySFi!</code>というテキストがあるPDFファイルを作り、SATySFiの世界に慣れてみましょう。</p>
+<h2><a class="header" href="#フォルダを作る" id="フォルダを作る">フォルダを作る</a></h2>
+<p>このPDFファイルを作成するためのフォルダを<code>mkdir</code>などを使って作りましょう。</p>
+<p>WSLを利用している場合は、Windows側にフォルダを作り、<code>/mnt/c/Users/hogehoge/Documents</code>のようにWSL側からアクセスするのが良いでしょう。</p>
+<p>そのフォルダの場所に移動して<code>wsl</code>コマンドを使ってWSLを起動すれば自動で上記のパスになっていると思います。</p>
+<h2><a class="header" href="#ファイルを作る" id="ファイルを作る">ファイルを作る</a></h2>
+<p><code>hello_satysfi.saty</code>というファイルを作ります。SATySFiでの文書ファイルは<code>.saty</code>拡張子です。</p>
+<h2><a class="header" href="#文書を書いて実行する" id="文書を書いて実行する">文書を書いて実行する</a></h2>
+<p>作成した<code>hello_satysfi.saty</code>を開き、以下のコードを入力してください。</p>
+<pre><code>@require: stdja
+
+document(|
+  title = {Hello \SATySFi;};
+  author = {私};
+  show-title = true;
+  show-toc = false;
+|) '&lt;
+  +p{
+    Hello \SATySFi;!
+    はじめまして！
+  }
+&gt;
+</code></pre>
+<p>VSCode, Vim, Emacs, AtomではそれぞれSATySFi用のシンタックスハイライトをする拡張が存在しています。
+各自インストールしてみると良いでしょう。</p>
+<pre><code>satysfi hello_satysfi.saty
+</code></pre>
+<p>とすることでPDFファイルが出力されます。</p>
+<p>ブラウザやDockerを使っている人は、それぞれの利用方法を確認してください。
+これ以降は<code>satysfi</code>コマンドを使う方法を説明しますが、特に変わらないと思っていてください。</p>
+<p>また、このようにPDFファイルを生成することを便宜的に「コンパイル」と呼んでいきます。</p>
+<p>出力されたPDFファイルを開いてみてください。「Hello SATySFi! はじめまして！」と書かれているはずです。</p>
+<blockquote>
+<p><strong>ToDo:</strong>
+スクリーンショットを貼る</p>
+</blockquote>
+<h2><a class="header" href="#文書の解剖" id="文書の解剖">文書の解剖</a></h2>
+<p>書かれた文書を詳しく確認していきましょう。</p>
+<p>まず、ファイル冒頭の</p>
+<pre><code>@require: stdja
+</code></pre>
+<p>です。</p>
+<p>ここでSATySFiの標準ライブラリに含まれているクラスファイルの一つである、<code>stdja.satyh</code>を読み込んでいます。</p>
+<p>出力されるPDFファイルの体裁を決定する特殊なパッケージファイルの一つです。LaTeXのそれとは細かいところは違いますが、果たす役割は同じと思って良いと思います。</p>
+<p>次に、<code>document (| ~ |) '&lt; ~ &gt;</code>の部分です。</p>
+<p>ここでは「<code>document</code>という関数に<code>(| ~ |)</code>という値と<code>'&lt; ~ &gt;</code>という値を与える」ということをしています。</p>
+<p><code>document</code>という関数は<code>stdja</code>クラスファイルによって提供されるもので、二つの引数を取って文書となる値を返す関数です。</p>
+<p>全てのクラスファイルが<code>document</code>という関数を提供するとも限りませんし、引数が二つに限定されるとも限りません。不安であれば各クラスファイルのドキュメントを確認しましょう。</p>
+<p><code>document</code>関数に渡す引数を確認しましょう。</p>
+<pre><code>(|
+  title = {Hello \SATySFi;};
+  author = {私};
+  show-title = true;
+  show-toc = false;
+|)
+</code></pre>
+<p>は「レコード」というデータ構造を表します。レコードは「ラベルに値を結び付けている」ものをまとめているもので、並べる順番は関係ありません。ですので、上のコードと</p>
+<pre><code>(|
+  show-title = true;
+  show-toc = false;
+  title = {Hello \SATySFi;};
+  author = {私};
+|)
+</code></pre>
+<p>は同一のものです。</p>
+<p><code>document</code>関数が要求しているレコードでは、</p>
+<ul>
+<li><code>title</code></li>
+<li><code>author</code></li>
+<li><code>show-title</code></li>
+<li><code>show-toc</code></li>
+</ul>
+<p>という4つのラベルを要求しています。</p>
+<p><code>title</code>では文書のタイトルを<code>{}</code>で囲まれた中に書き、<code>author</code>では文書のタイトルを<code>{}</code>で囲まれた中に書きます。
+<code>show-title</code>では「タイトルをPDFに表示するかしないか」を<code>true</code>か<code>false</code>のどちらかで指定します。
+<code>show-toc</code>では「目次をPDFに表示するかしないか」を<code>true</code>か<code>false</code>のどちらかで指定します。</p>
+<pre><code>'&lt;
+  +p{
+    Hello \SATySFi;!
+    はじめまして！
+  }
+&gt;
+</code></pre>
+<p>は文書の本体です。<code>'&lt;&gt;</code>という記法は、「文章のブロック」を示します。縦方向に連なる“箱”をイメージしてみてください。厳密には、箱になる前の“生の箱”です。
+この“生の箱”を<code>document</code>関数の中で“箱”に組み上げ、さらにPDF文書に変換しています。
+以降、この“生の箱”のことを「ブロックテキスト」と呼びます（ちなみに、“箱”の方は「ブロックボックス」と呼びます）。</p>
+<p><code>+p{}</code>は「文字からなる段落を箱にする機能」を持つ特殊な関数です。ブロックテキスト内では<code>+</code>から始まる特殊な関数しか使えません。この特殊な関数を「ブロックコマンド」と呼んでいきます。
+通常の関数は小文字から始まりますが、ブロックコマンドは<code>+</code>の後は任意のアルファベットから始まり、アルファベット・数字・<code>-</code>の3種類の文字が任意の組み合わせで使うことができます。</p>
+<p>ブロックコマンドはブロックテキスト内で何個も連ねることができます。
+例えば、</p>
+<pre><code>'&lt;
+  +p{
+    1個目の段落
+  }
+  +p{
+    2個目の段落
+  }
+&gt;
+</code></pre>
+<p>という風にです。</p>
+<p><code>+p</code>ブロックコマンドに与える値を見てみましょう。<code>{}</code>という記法は「一文字ごとに箱になったものが横にたくさん連なっている枠」のイメージです。これもまた厳密にはそうなる前の“生の枠”です。“生の枠”の方を「インラインテキスト」と呼び、“枠”の方を「インラインブロック」と呼んでいます。</p>
+<p>インラインテキスト内では行頭行末の空白と改行は（ほとんど）意味を持ちません。
+見やすいように改行し、インデントを付けましょう。</p>
+<p>インラインテキスト内ではほとんどの文字がそのまま使えます。
+ただし、</p>
+<ul>
+<li><code>`</code></li>
+<li><code>%</code></li>
+<li><code>\</code></li>
+<li><code>;</code></li>
+<li><code>$</code></li>
+<li><code>*</code></li>
+<li><code>@</code></li>
+<li><code>#</code></li>
+<li><code>{</code></li>
+<li><code>}</code></li>
+<li><code>&lt;</code></li>
+<li><code>&gt;</code></li>
+<li><code>|</code></li>
+</ul>
+<p>の文字は<code>\</code>を使ってエスケープする必要があります。</p>
+<p>さて、このインラインテキスト内で関数を使いたくなる時は<code>\</code>から始まる「インラインコマンド」を使います。
+<code>\SATySFi</code>というコマンドは「<code>SATYSFI</code>という文字列の内、<code>Y</code>と<code>I</code>を少し下げて表示する」という関数です。
+ブロックコマンドと同じように、インラインコマンドには引数として値を受け取り、様々な機能を実現することができます。</p>
+<p>ブロックコマンドやインラインコマンドがインラインテキストやブロックテキストの引数を取らないときは<code>;</code>を使うことで「コマンドの終了」を宣言します。
+厳密な使い分けについては後の章を読んでください。</p>
+<h1><a class="header" href="#satysfiで文書を書く" id="satysfiで文書を書く">SATySFiで文書を書く</a></h1>
+<p>SATySFiで文書を書くために必要な知識を付けて生きましょう。
+必要なものは文書構造に対する意識と、「横に伸びる枠」・「縦に連なる箱」のイメージだけです！</p>
+<p>具体的なコマンドにも踏み込んでいきます。</p>
+<ul>
+<li>コメントアウト</li>
+<li>パッケージの読み込み</li>
+<li>文書構造の記述の仕方</li>
+<li>コマンドの記述</li>
+<li>インラインコマンド・ブロックコマンドの紹介</li>
+<li>文中数式</li>
+<li>別行建て数式</li>
+<li>数学コマンドの紹介</li>
+<li>箇条書き</li>
+<li>相互参照</li>
+</ul>
+<p>について解説していきます。</p>
+<h1><a class="header" href="#コメントアウト" id="コメントアウト">コメントアウト</a></h1>
+<p>SATySFiでは他のプログラミングと同じようにコメントを書くことができます。</p>
+<p>推敲するときやメッセージを書く時に使ってみてはいかがでしょうか。
+単純にコメントとして使うだけではなく「改行文字のキャンセル」としても使えます。</p>
+<p>コメントアウトはLaTeXと同じように<code>%</code>を使います。
+<code>%</code>から始まって最初の改行文字までがコメントとして扱われます。</p>
+<p>複数行のコメントアウトはできません。</p>
+<h1><a class="header" href="#パッケージの読み込み" id="パッケージの読み込み">パッケージの読み込み</a></h1>
+<p><code>@require: （パッケージ名）</code>や<code>@import: （パッケージファイルへの相対パス）</code>でパッケージの読み込みができます。
+パッケージを読み込む場合は、拡張子を必ず省略します。</p>
+<h1><a class="header" href="#パッケージのインストール" id="パッケージのインストール">パッケージのインストール</a></h1>
+<p>satyrographosを使うことで有志の作成したパッケージを簡単にインストールすることができます。</p>
+<p>例えば、<a href="https://github.com/nyuichi/satysfi-base">satysfi-base</a>というパッケージ群をインストールするには</p>
+<pre><code>opam update
+opam install satysfi-base
+satyrographos install
+</code></pre>
+<p>をするだけです。</p>
+<p>ここでインストールしたパッケージは<code>@require: base/int</code>のようにして読み込むことができます。
+satyrographosによってインストールされるパッケージは、ファイル名の衝突を避けるためにライブラリごとに一つのフォルダに入っています。そのため、そのフォルダを含めて指定する必要があります。</p>
+<p>satyrographosによってインストールされるライブラリの名前は<code>satysfi-</code>から始まるようになっています。
+しかし、satyrographosによってシステムにインストールされるときには基本的に<code>satysfi-</code>の部分が外れるようになっています。詳しくは<a href="https://github.com/na4zagin3/satyrographos#readme">satyrographosのREADME</a>や「<a href="https://qiita.com/na4zagin3/items/14fe2647b663eeac6ac2">Satyrographos でパッケージの簡単インストール</a>」を読んでください。</p>
+<p>インストールできるライブラリの一覧は</p>
+<pre><code>opam list 'satysfi-*'
+</code></pre>
+<p>によって確認できます。</p>
+<h1><a class="header" href="#手動でパッケージをインストールする" id="手動でパッケージをインストールする">手動でパッケージをインストールする</a></h1>
+<p>satyrographosを使っている場合、<code>~/.satysfi/dist/packages/</code>にパッケージはインストールされます。</p>
+<p>しかし、<code>~/.satysfi/dist/</code>以下は基本的に人が弄ることは想定されていません。
+そこで、ユーザ自身がパッケージ類を格納することを想定している<code>~/.satysfi/local/</code>以下にパッケージファイルをコピーします。</p>
+<p>distの方が優先順位が高いので、distからの相対パスとlocalからの相対パスが同じファイルが存在しない限り、localに置いたファイルが読み込まれます。</p>
+<h1><a class="header" href="#文書構造の記述" id="文書構造の記述">文書構造の記述</a></h1>
+<p>章節を記述することができます。
+構造的な文章を書くためには欠かせません。</p>
+<p>stdjaとstdjabookの両パッケージでは<code>+section</code>と<code>+subsection</code>コマンドが、stdjareportパッケージでは<code>+chapter</code>・<code>+section</code>・<code>+subsection</code>の3つのコマンドが提供されます。</p>
+<p>どのコマンドも<code>+section{（タイトル）}&lt;（中身）&gt;</code>という使い方をします。</p>
+<p>例えば</p>
+<pre><code>+section {1節} &lt;
+  +subsection{小節} &lt;
+    +p{段落}
+  &gt;
+  +subsection{小節その2} &lt;
+    +p{段落2}
+  &gt;
+&gt;
+</code></pre>
+<p>のような感じです。</p>
+<h1><a class="header" href="#コマンドの記述" id="コマンドの記述">コマンドの記述</a></h1>
+<p>ブロックテキストやインラインテキスト内で書ける関数のようなものを「コマンド」と呼んでいます。</p>
+<p>SATySFiのコマンドの書き方はLaTeXのコマンドに比べて初見は難しいですが、慣れればとても単純です。</p>
+<p>まず、引数は基本的に<code>()</code>で括られ、最後に<code>;</code>がつくと考えてください。
+例えば、<code>\cmd(1)(2.0)({テキスト});</code>や<code>+cmd(1)(2.0)({テキスト});</code>のような形です。</p>
+<p>しかし、インラインテキストやブロックテキスト、後程紹介するレコードやリストなど、既に「括弧のようなもの」で囲われている値も<code>()</code>で括らなければならないのは不便です。</p>
+<p>そこで、<code>{}</code>, <code>&lt;&gt;</code>, <code>[]</code>が最後に来るときのみ<code>;</code>を省略することができるというルールが存在します。</p>
+<h1><a class="header" href="#インラインコマンドブロックコマンドの紹介" id="インラインコマンドブロックコマンドの紹介">インラインコマンド・ブロックコマンドの紹介</a></h1>
+<h1><a class="header" href="#文中数式" id="文中数式">文中数式</a></h1>
+<h1><a class="header" href="#別行建て数式" id="別行建て数式">別行建て数式</a></h1>
+<h1><a class="header" href="#数学コマンドの紹介" id="数学コマンドの紹介">数学コマンドの紹介</a></h1>
+<h1><a class="header" href="#箇条書き" id="箇条書き">箇条書き</a></h1>
+<h1><a class="header" href="#脚注" id="脚注">脚注</a></h1>
+<h1><a class="header" href="#相互参照" id="相互参照">相互参照</a></h1>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
