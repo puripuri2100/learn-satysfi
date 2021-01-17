@@ -1,0 +1,263 @@
+<!DOCTYPE HTML>
+<html lang="ja" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>リリースされているv0.0.5をインストールする - SATySFi Documents</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../chapter1/chapter_1.html"><strong aria-hidden="true">1.</strong> まえがき</a></li><li class="chapter-item expanded "><a href="../chapter2/chapter_2.html"><strong aria-hidden="true">2.</strong> 導入</a></li><li class="chapter-item expanded "><a href="../chapter3/chapter_3.html"><strong aria-hidden="true">3.</strong> SATySFiを始める</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../chapter3/install_satyrographos.html"><strong aria-hidden="true">3.1.</strong> satyrographosをインストールする</a></li><li class="chapter-item expanded "><a href="../chapter3/install_satysfi.html"><strong aria-hidden="true">3.2.</strong> SATySFiをインストールする</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../chapter3/install_satysfi_by_satyrographos.html"><strong aria-hidden="true">3.2.1.</strong> satyrographosでインストールする</a></li><li class="chapter-item expanded "><a href="../chapter3/install_satysfi_at_HEAD.html"><strong aria-hidden="true">3.2.2.</strong> HEAD版をインストールする</a></li><li class="chapter-item expanded "><a href="../chapter3/install_satysfi_at_release.html" class="active"><strong aria-hidden="true">3.2.3.</strong> リリースされているv0.0.5をインストールする</a></li><li class="chapter-item expanded "><a href="../chapter3/use_docker.html"><strong aria-hidden="true">3.2.4.</strong> docker imageを使う</a></li><li class="chapter-item expanded "><a href="../chapter3/use_browser.html"><strong aria-hidden="true">3.2.5.</strong> ブラウザを使う</a></li></ol></li><li class="chapter-item expanded "><a href="../chapter3/hello_satysfi.html"><strong aria-hidden="true">3.3.</strong> Hello SATySFi!</a></li></ol></li><li class="chapter-item expanded "><a href="../chapter4/chapter_4.html"><strong aria-hidden="true">4.</strong> SATySFiで文書を書く</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../chapter4/comment_out.html"><strong aria-hidden="true">4.1.</strong> コメントアウト</a></li><li class="chapter-item expanded "><a href="../chapter4/import_package.html"><strong aria-hidden="true">4.2.</strong> パッケージの読み込み・インストール</a></li><li class="chapter-item expanded "><a href="../chapter4/document_structure.html"><strong aria-hidden="true">4.3.</strong> 文書構造の記述</a></li><li class="chapter-item expanded "><a href="../chapter4/command.html"><strong aria-hidden="true">4.4.</strong> コマンドの記述</a></li><li class="chapter-item expanded "><a href="../chapter4/introduction_inlinecommand_blockcommand.html"><strong aria-hidden="true">4.5.</strong> インラインコマンド・ブロックコマンドの紹介</a></li><li class="chapter-item expanded "><a href="../chapter4/math_in_inline.html"><strong aria-hidden="true">4.6.</strong> 文中数式</a></li><li class="chapter-item expanded "><a href="../chapter4/math_in_block.html"><strong aria-hidden="true">4.7.</strong> 別行建て数式</a></li><li class="chapter-item expanded "><a href="../chapter4/introduction_mathcommand.html"><strong aria-hidden="true">4.8.</strong> 数学コマンドの紹介</a></li><li class="chapter-item expanded "><a href="../chapter4/itemize.html"><strong aria-hidden="true">4.9.</strong> 箇条書き</a></li><li class="chapter-item expanded "><a href="../chapter4/footnote.html"><strong aria-hidden="true">4.10.</strong> 脚注</a></li><li class="chapter-item expanded "><a href="../chapter4/ref.html"><strong aria-hidden="true">4.11.</strong> 相互参照</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> SATySFiでプログラミングをする</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.1.</strong> 簡単なコマンド定義</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.</strong> 基本的な値</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.1.</strong> 整数と小数</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.2.</strong> 長さ</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.3.</strong> 真偽値</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.4.</strong> 文字列</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.5.</strong> タプル</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.6.</strong> データ構造</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.3.</strong> 変数と束縛</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.4.</strong> 簡単な型システム</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.5.</strong> エラーメッセージを読む</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.6.</strong> 破壊的代入</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.7.</strong> 関数定義</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.8.</strong> 制御フロー</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.9.</strong> 代数的データ型</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.10.</strong> パターンマッチ</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.11.</strong> 再帰関数</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.12.</strong> レコード</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.13.</strong> プリミティブの紹介</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.13.1.</strong> 数値計算</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.13.2.</strong> 文字列処理</div></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> 文書が処理される仕組み</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.</strong> フロントエンド</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.1.</strong> 字句解析器</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.2.</strong> 構文解析器</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.3.</strong> 型検査器</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.</strong> バックエンド</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.1.</strong> インラインテキストからインラインボックスへ</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.2.</strong> 行分割処理</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.3.</strong> ページ分割処理</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.4.</strong> 関連するプリミティブ</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.4.1.</strong> 長さを取得する</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.4.2.</strong> 行分割箇所とペナルティ</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.4.3.</strong> グルーの制御</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.4.4.</strong> ブロック方向の制御</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.4.5.</strong> ブロックとインラインを混ぜる</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.4.6.</strong> 相互参照</div></li></ol></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> インラインとブロックに関する高度なコマンド定義</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> グラフィックス</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> パスの作成</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.2.</strong> パスからグラフィックスへ</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.3.</strong> 囲み枠</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.4.</strong> 画像</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> 数式</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.</strong> 数式に関する構文</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.</strong> 数式コマンドの定義</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.3.</strong> 括弧の描画</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> 設定ファイル</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">10.1.</strong> フォント設定</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> 特殊な機能</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">11.1.</strong> デバッグオプション</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.2.</strong> マークダウンファイルを処理する</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.3.</strong> テキストモード</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.</strong> パッケージを作ってみる</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">12.1.</strong> モジュールの作成</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.2.</strong> デバッグ</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.3.</strong> satyrographosへの登録</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.</strong> クラスファイルを作成する</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">13.1.</strong> 基本関数の作成</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.2.</strong> フォントの設定</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.3.</strong> 基本文脈の作成</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.4.</strong> ドキュメント関数を作成する</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.5.</strong> タイトル部分を作る</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.6.</strong> 目次を作る</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.7.</strong> PDFアウトラインを作成する</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.8.</strong> 文書を書くためのコマンドの作成</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">14.</strong> SATySFiに関する資料</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">15.</strong> SATySFiのコミュニティ</div></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">SATySFi Documents</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#satysfiのv005をインストールする" id="satysfiのv005をインストールする">SATySFiのv0.0.5をインストールする</a></h1>
+<p>GitHubのリポジトリでリリースされているv0.0.5をインストールします。</p>
+<h2><a class="header" href="#環境構築" id="環境構築">環境構築</a></h2>
+<p>OPAMとOCamlがインストールされている必要があります。
+satyrographosをインストールしていれば環境は自動で整っています。
+もし、インストールしていないのであれば、「satyrographosをインストールする」を読んでOPAMとOCamlをインストールしてください。</p>
+<h2><a class="header" href="#リリースされているファイルをダウンロードする" id="リリースされているファイルをダウンロードする">リリースされているファイルをダウンロードする</a></h2>
+<p>リリースされているファイルをダウンロードし、展開します。</p>
+<pre><code class="language-sh">curl https://github.com/gfngfn/SATySFi/archive/v0.0.5.zip
+unzip v0.0.5.zip -d SATySFi
+</code></pre>
+<p>でSATySFiというフォルダが出来上がります。</p>
+<h2><a class="header" href="#satysfiをビルドする" id="satysfiをビルドする">SATySFiをビルドする</a></h2>
+<p>作成したSATySFiフォルダに移動し、OPAMを使ってインストールします。
+必要なライブラリは自動でインストールされます。</p>
+<pre><code class="language-sh">cd SATySFi
+
+opam pin add satysfi .
+opam install satysfi
+</code></pre>
+<h2><a class="header" href="#フォントや標準ライブラリをインストールする" id="フォントや標準ライブラリをインストールする">フォントや標準ライブラリをインストールする</a></h2>
+<p>フォントのインストールと標準ライブラリのインストールはそれぞれ別々のシェルスクリプトに分離されています。</p>
+<p><code>install-libs.sh</code>の実行には管理者権限が必要です。</p>
+<pre><code>./download-fonts.sh
+sudo ./install-libs.sh
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../chapter3/install_satysfi_at_HEAD.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../chapter3/use_docker.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../chapter3/install_satysfi_at_HEAD.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../chapter3/use_docker.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
