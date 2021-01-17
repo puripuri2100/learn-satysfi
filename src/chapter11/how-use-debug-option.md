@@ -31,19 +31,19 @@ v0.0.5で提供されているのは
 
 また、ベースラインも同じ色の線で表示されます。
 
-![--debug-show-bboxの出力結果](../img/ch10-bbox-demo.JPG)
+![--debug-show-bboxの出力結果](../img/ch11-bbox-demo.JPG)
 
 ## `--debug-show-space`
 
 文字やブロック間のスペースを青い枠で表示します。
 
-![--debug-show-spaceの出力結果](../img/ch10-space-demo.JPG)
+![--debug-show-spaceの出力結果](../img/ch11-space-demo.JPG)
 
 ## `--debug-show-block-bbox`
 
 行が薄い緑色の枠で囲われ、テキストが入る領域の高さを表示するピンクの線が左側に付きます。
 
-![--debug-show-block-bboxの出力結果](../img/ch10-block-bbox-demo.JPG)
+![--debug-show-block-bboxの出力結果](../img/ch11-block-bbox-demo.JPG)
 
 
 ## `--debug-show-block-space`
@@ -53,11 +53,11 @@ v0.0.5で提供されているのは
 段落間のスペースが三角形で表示され、より大きい方のスペースが採用されていることがわかります。
 行間が細めの緑色の線です。
 
-![--debug-show-block-spaceの出力結果](../img/ch10-block-space-demo.JPG)
+![--debug-show-block-spaceの出力結果](../img/ch11-block-space-demo.JPG)
 
 ## `--debug-show-overfull`
 
 overfullやunderfullを起こした行に赤い枠が付きます。
 
-![--debug-show-overfull-spaceの出力結果](../img/ch10-overfull-demo.JPG)
+![--debug-show-overfull-spaceの出力結果](../img/ch11-overfull-demo.JPG)
 
