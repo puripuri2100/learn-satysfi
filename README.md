@@ -40,7 +40,7 @@ Rust製の[mdBook](https://github.com/rust-lang/mdBook)というソフトウェ�
     - [ ] [データ構造]()
   - [ ] [変数と束縛]()
   - [ ] [簡単な型システム]()
-  - [x] [SATySFiのエラーメッセージと対処法](./chapter5/errors.md)
+  - [x] [SATySFiのエラーメッセージと対処法](src/chapter5/errors.md)
   - [ ] [破壊的代入]()
   - [ ] [関数定義]()
   - [ ] [制御フロー]()
