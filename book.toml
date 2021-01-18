@@ -1,10 +1,16 @@
 [book]
-authors = ["puripuri2100"]
+authors = ["puripuri2100", "monaqa"]
 language = "ja"
 multilingual = false
 src = "src"
 title = "SATySFi Documents"
-git-repository-url = "https://github.com/puripuri2100/learn-satysfi"
+description = "SATySFiを学ぶためのドキュメント（作成中）"
+
+[build]
+build-dir = "book"
 
 [output.html]
+git-repository-url = "https://github.com/puripuri2100/learn-satysfi"
+git-repository-icon = "fa-github"
+site-url = "https://puripuri2100.github.io/learn-satysfi/"
 mathjax-support = true
