@@ -80,7 +80,7 @@ Rust製の[mdBook](https://github.com/rust-lang/mdBook)というソフトウェ�
 - [ ] [設定ファイル]()
   - [ ] [フォント設定]()
 - [ ] [特殊な機能]()
-  - [x] [デバッグオプション](src/chapter10/how-use-debug-option.md)
+  - [x] [デバッグオプション](src/chapter11/how-use-debug-option.md)
   - [ ] [マークダウンファイルを処理する]()
   - [ ] [テキストモード]()
 - [ ] [パッケージを作ってみる]()
