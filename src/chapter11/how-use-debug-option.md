@@ -23,6 +23,22 @@ v0.0.5で提供されているのは
 
 どれも、起動時に付けるだけで有効になります。引数は必要ありません。
 
+例えば、
+
+```sh
+satysfi input.saty --debug-show-bbox --debug-show-space --debug-show-block-bbox --debug-show-block-space
+```
+
+とすると、
+
+- `--debug-show-bbox`
+- `--debug-show-space`
+- `--debug-show-block-bbox`
+- `--debug-show-block-space`
+
+が4つ有効になります。
+
+
 それでは、一つずつ役割や出力結果の見方などについて説明していきます。
 
 ## `--debug-show-bbox`
@@ -52,6 +68,8 @@ v0.0.5で提供されているのは
 
 段落間のスペースが三角形で表示され、より大きい方のスペースが採用されていることがわかります。
 行間が細めの緑色の線です。
+
+なお、段落間での改ページが抑制されているときは塗りつぶされていない枠だけの三角形が描画されます。
 
 ![--debug-show-block-spaceの出力結果](../img/ch11-block-space-demo.JPG)
 
