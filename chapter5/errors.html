@@ -1,0 +1,427 @@
+<!DOCTYPE HTML>
+<html lang="ja" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>SATySFiのエラーメッセージと対処法 - SATySFi Documents</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../chapter1/chapter_1.html"><strong aria-hidden="true">1.</strong> まえがき</a></li><li class="chapter-item expanded "><a href="../chapter2/chapter_2.html"><strong aria-hidden="true">2.</strong> 導入</a></li><li class="chapter-item expanded "><a href="../chapter3/chapter_3.html"><strong aria-hidden="true">3.</strong> SATySFiを始める</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../chapter3/install_satyrographos.html"><strong aria-hidden="true">3.1.</strong> satyrographosをインストールする</a></li><li class="chapter-item expanded "><a href="../chapter3/install_satysfi.html"><strong aria-hidden="true">3.2.</strong> SATySFiをインストールする</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../chapter3/install_satysfi_by_satyrographos.html"><strong aria-hidden="true">3.2.1.</strong> satyrographosでインストールする</a></li><li class="chapter-item expanded "><a href="../chapter3/install_satysfi_at_HEAD.html"><strong aria-hidden="true">3.2.2.</strong> HEAD版をインストールする</a></li><li class="chapter-item expanded "><a href="../chapter3/install_satysfi_at_release.html"><strong aria-hidden="true">3.2.3.</strong> リリースされているv0.0.5をインストールする</a></li><li class="chapter-item expanded "><a href="../chapter3/use_docker.html"><strong aria-hidden="true">3.2.4.</strong> docker imageを使う</a></li><li class="chapter-item expanded "><a href="../chapter3/use_browser.html"><strong aria-hidden="true">3.2.5.</strong> ブラウザを使う</a></li></ol></li><li class="chapter-item expanded "><a href="../chapter3/hello_satysfi.html"><strong aria-hidden="true">3.3.</strong> Hello SATySFi!</a></li></ol></li><li class="chapter-item expanded "><a href="../chapter4/chapter_4.html"><strong aria-hidden="true">4.</strong> SATySFiで文書を書く</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../chapter4/comment_out.html"><strong aria-hidden="true">4.1.</strong> コメントアウト</a></li><li class="chapter-item expanded "><a href="../chapter4/import_package.html"><strong aria-hidden="true">4.2.</strong> パッケージの読み込み・インストール</a></li><li class="chapter-item expanded "><a href="../chapter4/document_structure.html"><strong aria-hidden="true">4.3.</strong> 文書構造の記述</a></li><li class="chapter-item expanded "><a href="../chapter4/command.html"><strong aria-hidden="true">4.4.</strong> コマンドの記述</a></li><li class="chapter-item expanded "><a href="../chapter4/introduction_inlinecommand_blockcommand.html"><strong aria-hidden="true">4.5.</strong> インラインコマンド・ブロックコマンドの紹介</a></li><li class="chapter-item expanded "><a href="../chapter4/math_in_inline.html"><strong aria-hidden="true">4.6.</strong> 文中数式</a></li><li class="chapter-item expanded "><a href="../chapter4/math_in_block.html"><strong aria-hidden="true">4.7.</strong> 別行建て数式</a></li><li class="chapter-item expanded "><a href="../chapter4/introduction_mathcommand.html"><strong aria-hidden="true">4.8.</strong> 数学コマンドの紹介</a></li><li class="chapter-item expanded "><a href="../chapter4/itemize.html"><strong aria-hidden="true">4.9.</strong> 箇条書き</a></li><li class="chapter-item expanded "><a href="../chapter4/footnote.html"><strong aria-hidden="true">4.10.</strong> 脚注</a></li><li class="chapter-item expanded "><a href="../chapter4/ref.html"><strong aria-hidden="true">4.11.</strong> 相互参照</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> SATySFiでプログラミングをする</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.1.</strong> 簡単なコマンド定義</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.</strong> 基本的な値</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.1.</strong> 整数と小数</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.2.</strong> 長さ</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.3.</strong> 真偽値</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.4.</strong> 文字列</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.5.</strong> タプル</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.6.</strong> データ構造</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.3.</strong> 変数と束縛</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.4.</strong> 簡単な型システム</div></li><li class="chapter-item expanded "><a href="../chapter5/errors.html" class="active"><strong aria-hidden="true">5.5.</strong> SATySFiのエラーメッセージと対処法</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.6.</strong> 破壊的代入</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.7.</strong> 関数定義</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.8.</strong> 制御フロー</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.9.</strong> 代数的データ型</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.10.</strong> パターンマッチ</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.11.</strong> 再帰関数</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.12.</strong> レコード</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.13.</strong> プリミティブの紹介</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.13.1.</strong> 数値計算</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.13.2.</strong> 文字列処理</div></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> 文書が処理される仕組み</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.</strong> フロントエンド</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.1.</strong> 字句解析器</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.2.</strong> 構文解析器</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.3.</strong> 型検査器</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.</strong> バックエンド</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.1.</strong> インラインテキストからインラインボックスへ</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.2.</strong> 行分割処理</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.3.</strong> ページ分割処理</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.4.</strong> 関連するプリミティブ</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.4.1.</strong> 長さを取得する</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.4.2.</strong> 行分割箇所とペナルティ</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.4.3.</strong> グルーの制御</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.4.4.</strong> ブロック方向の制御</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.4.5.</strong> ブロックとインラインを混ぜる</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.4.6.</strong> 相互参照</div></li></ol></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> インラインとブロックに関する高度なコマンド定義</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> グラフィックス</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> パスの作成</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.2.</strong> パスからグラフィックスへ</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.3.</strong> 囲み枠</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.4.</strong> 画像</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> 数式</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.</strong> 数式に関する構文</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.</strong> 数式コマンドの定義</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.3.</strong> 括弧の描画</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> 設定ファイル</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">10.1.</strong> フォント設定</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> 特殊な機能</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../chapter11/how-use-debug-option.html"><strong aria-hidden="true">11.1.</strong> デバッグオプション</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.2.</strong> マークダウンファイルを処理する</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.3.</strong> テキストモード</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.</strong> パッケージを作ってみる</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">12.1.</strong> モジュールの作成</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.2.</strong> デバッグ</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.3.</strong> satyrographosへの登録</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.</strong> クラスファイルを作成する</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">13.1.</strong> 基本関数の作成</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.2.</strong> フォントの設定</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.3.</strong> 基本文脈の作成</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.4.</strong> ドキュメント関数を作成する</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.5.</strong> タイトル部分を作る</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.6.</strong> 目次を作る</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.7.</strong> PDFアウトラインを作成する</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.8.</strong> 文書を書くためのコマンドの作成</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">14.</strong> SATySFiに関する資料</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">15.</strong> SATySFiのコミュニティ</div></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">SATySFi Documents</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#satysfiのエラーメッセージと対処法" id="satysfiのエラーメッセージと対処法">SATySFiのエラーメッセージと対処法</a></h1>
+<p>SATySFiの強みは静的な型付けおよび静的解析です．
+静的解析によって実際に文書を組む前に誤りを発見することができ，
+エラーの原因に関する情報を具体的に知ることができます．</p>
+<p>事前に誤りを発見するということは，逆に言えばユーザが正しいコードを書くまで永遠に文書が生成されないということでもあります．
+SATySFiをはじめたばかりでまだ構文や型の区別に慣れていないユーザにとっては，
+よくわからないエラーばかり出てきてちっとも望む出力が得られない，
+という不満につながってしまうかもしれません．
+しかしそれは勿体無いことです．
+ある程度正確にコードが書けるようになった人にとってコンパイルエラーはありがたいものであり，
+自分が混入させてしまったバグを素早く取り除くための有益な情報となります．
+この章では，典型的なエラーメッセージと考えられる原因，対処法を紹介します．</p>
+<h2><a class="header" href="#satysfi-のエラーの見方" id="satysfi-のエラーの見方">SATySFi のエラーの見方</a></h2>
+<p>エラーの見方を学ぶには，実際に誤ったソースコードをコンパイルしてエラー表示を眺めるのが確実です．
+たとえば，以下のコードをコンパイルしてみましょう．</p>
+<pre><code>@require: stdja
+
+document(| title = {}; author = {}; show-title = true; show-toc = false |) '&lt;
+
+  +command-not-defined{
+    Hello, World!
+  }
+
+&gt;
+</code></pre>
+<p>このコードに登場する <code>+command-not-defined</code> というコマンドは，それまでのどこにも定義されていません．
+このコードをコンパイルすると以下のようなエラーが出力され，処理が停止します．</p>
+<pre><code> ---- ---- ---- ----
+  target file: 'example1.pdf'
+  dump file: 'example1.satysfi-aux' (already exists)
+
+（中略）
+
+ ---- ---- ---- ----
+  type checking 'example1.saty' ...
+! [Type Error] at &quot;example1.saty&quot;, line 5, characters 2-22:
+    undefined variable '+command-not-defined'.
+</code></pre>
+<p>ここで大事なのは <code>!</code> から始まる行と，それ以降です．
+エラーの文言はたいてい以下の3要素からなります．</p>
+<ul>
+<li><strong>エラーの種類</strong>：ここでは <code>[Type Error]</code> です．
+つまり，字句解析の段階で生じた文法エラーであることを表しています．</li>
+<li><strong>エラーの位置</strong>：ここでは <code>&quot;example1.saty&quot;, line 5, characters 2-22</code> です．
+<code>example1.saty</code> という名前のファイルの8行目の2文字目から22文字目のところでエラーが見つかったことを示しています．
+なお文字は 0-index でカウントし，終端を含みません．
+1からカウントを始める人がもしいれば，3文字目から22文字目にかけて，と読むのが良いでしょう．</li>
+<li><strong>エラーの具体的な内容</strong>：ここでは <code>undefined variable '+command-not-defined'.</code> です．
+つまり， <code>+command-not-defined</code> という変数（コマンド）は存在しない，と書かれています．</li>
+</ul>
+<p>代表的なエラーの種類には以下のようなものがあります．</p>
+<ul>
+<li>モジュールのパス解決エラー</li>
+<li>構文エラー</li>
+<li>型エラー</li>
+<li>実行時エラー</li>
+</ul>
+<h2><a class="header" href="#構文エラー" id="構文エラー">構文エラー</a></h2>
+<p>SATySFi 処理系では，
+ソースコードを処理するとき最初に字句解析器 (lexer) と構文解析器 (parser) に通すことで構文のパースを行います．
+この時点で生じるエラーは <strong>構文エラー</strong> として処理され，
+以下のメッセージから始まるエラー文を出力します．</p>
+<ul>
+<li><code>[Syntax Error at Lexer]</code></li>
+<li><code>[Syntax Error at Parser]</code></li>
+</ul>
+<p>両者には字句解析の段階で失敗したか，構文解析の段階で失敗したかという違いがあるものの，
+どちらもユーザが何らかの文法ミスを犯したときに出るエラーという点では共通しているため，
+普段はそこまで違いを気にする必要はありません．</p>
+<h2><a class="header" href="#構文エラーの原因" id="構文エラーの原因">構文エラーの原因</a></h2>
+<p>SATySFi で犯しやすい構文エラーは以下のとおりです．</p>
+<ul>
+<li>
+<p><strong>インラインテキストとブロックテキストの混同</strong>．
+SATySFi では，インラインテキストとブロックテキストをしっかり区別する必要がある．
+インラインテキストでは通常の文字を書くことができるが，ブロックテキストではできない．
+たとえば以下のコードはエラーになる．</p>
+<pre><code>+section{テスト}&lt;
+  本文
+&gt;
+</code></pre>
+<p>「本文」と書かれている箇所はブロックテキストの入る箇所であり，
+直接文を書くと構文解析ができず構文エラーとなる．以下の例などのように書けば問題ない．</p>
+<pre><code>+section{テスト}&lt;
+  +p{
+    本文
+  }
+&gt;
+</code></pre>
+</li>
+<li>
+<p><strong>コマンドの構文誤り</strong>．
+たとえば，<code>+p{}</code> とすべきところを <code>+p{};</code> としたり，
+<code>\eqn(${\pi});</code> とすべきところを <code>\eqn(${\pi})</code> としたりすると構文エラーとなる．</p>
+</li>
+<li>
+<p><strong>括弧の対応ミス</strong>．
+当然ながら，<code>()</code> や <code>[]</code>， <code>{}</code> といった括弧の対応が正しく取れていないコードは正しく処理できない．
+また，リストやレコードの区切り文字は <code>,</code> ではなく <code>;</code> であることにも注意
+（カンマ区切りの他言語などを書いているとつい忘れがち）．</p>
+</li>
+<li>
+<p><strong>ヘッダの構文誤り</strong>．
+SATySFi では，冒頭に <code>@import:</code>, <code>@require:</code> から始まる宣言を付けることで他のヘッダファイルやパッケージを読み込むことができる．
+ヘッダは常にファイルの冒頭に固めて記述する必要があり，
+また <code>@</code> の後や <code>:</code> の直前にスペースを入れることは許されない．</p>
+</li>
+</ul>
+<p>Vim, Emacs, VSCode といった著名なテキストエディタでは，
+有志の手によって SATySFi のシンタックスハイライトを行ってくれる拡張機能が開発されています．
+単にコードが見やすくなるだけでなく，構文エラーを引き起こす記述にも気づきやすくなるため，
+可能であればそれらを活用するのがおすすめです．</p>
+<h2><a class="header" href="#依存解決エラー" id="依存解決エラー">依存解決エラー</a></h2>
+<h3><a class="header" href="#依存解決エラーの原因" id="依存解決エラーの原因">依存解決エラーの原因</a></h3>
+<ul>
+<li>
+<p><code>@require</code> と <code>@import</code> の混同</p>
+<p><code>@require</code> は「SATySFi にインストールされている（=特定のディレクトリに格納されている）パッケージ」を指定する際に，
+<code>@import</code> は「読み込みたいファイルへの相対パス」を指定する際に用いる．</p>
+</li>
+<li>
+<p><code>.satyh</code> や <code>.satyg</code> のファイルパスが正しくない</p>
+</li>
+<li>
+<p>必要なフォントファイルがSATySFiの読める場所にない</p>
+</li>
+<li>
+<p>フォントファイルは適切な場所にあるものの，ハッシュファイルに情報が記載されていない</p>
+</li>
+</ul>
+<h2><a class="header" href="#型エラー" id="型エラー">型エラー</a></h2>
+<p>SATySFi は，型推論に基づいて静的な型付けを行う言語です．
+ユーザが指定した型や型推論の結果に不整合があったなどの原因で正しく型推論を行えなかった場合，
+静的解析の段階でそれがエラーとして表出されます．</p>
+<h3><a class="header" href="#型エラーの代表的な原因" id="型エラーの代表的な原因">型エラーの代表的な原因</a></h3>
+<ul>
+<li>
+<p><strong>未定義の変数やコマンド</strong>．
+他言語と同様に未定義の変数やコマンドがあればエラーとなる．</p>
+</li>
+<li>
+<p><strong>用いる演算子のミス</strong>．
+SATySFi は OCaml と同様に，演算子のオーバーロードが存在しない．
+たとえば <code>+</code> という演算子はint型とint型同士の加算にしか用いることができず，
+float型（浮動小数点数）同士の加算やlength型（長さ，寸法）同士の加算には用いられない．
+<code>2.0 + 3.0</code> のように書くと，以下のような型エラーが生じる．</p>
+<pre><code>  type checking 'example1.saty' ...
+! [Type Error] at &quot;example1.saty&quot;, line 3, characters 8-11:
+    this expression has type
+      float,
+    but is expected of type
+      int.
+</code></pre>
+<p>演算子 <code>+</code> によってint型が来ることが期待されているにも関わらず float 型の数値が来たことを意味する．
+float型同士なら <code>2.0 +. 3.0</code>，length型同士なら <code>2pt +' 3mm</code> のように，演算子を区別する必要がある．</p>
+</li>
+<li>
+<p><strong>浮動小数点にはマイナスを付けられない</strong>．
+上と関連しているが， SATySFi では現状 <code>-2.0</code> のように書くことができない．
+そのため <code>-2.0</code> と書くと「単項演算子 <code>-</code> の後ろには int が期待されている」という型エラーになる．
+なお長さの場合は，リテラルに限り <code>-2pt</code> や <code>-2.5pt</code> と書くことができる
+（マイナスと数値の間にはスペースを空けてはいけない）．
+ただし，length 型を持つ変数 <code>x</code> に対して <code>-x</code> とするとやはり型エラーとなるので注意．</p>
+</li>
+</ul>
+<!-- 説明がややこしくなりそうなので一旦無し
+* **inline-text型とinline-boxes型の混同**．
+
+* **block-text型とblock-boxes型の混同**．
+-->
+<ul>
+<li>
+<p><strong>プリアンブルと本文の間に in がない．</strong>
+これは本来ユーザが誤った文法で書いてしまったことが原因で生じるエラーであるものの，
+SATySFiの文法の都合上文法エラーではなく型エラーとして扱われる．</p>
+</li>
+<li>
+<p>その他，様々な型のミス．</p>
+</li>
+</ul>
+<h2><a class="header" href="#実行時エラー" id="実行時エラー">実行時エラー</a></h2>
+<p>静的型付け言語であるSATySFiは，多くのミスを静的解析の段階で検出できるようになっています．
+しかし，実際に値を評価するときに初めて表出するエラーもあります．</p>
+<h3><a class="header" href="#実行時エラーの代表的な原因" id="実行時エラーの代表的な原因">実行時エラーの代表的な原因</a></h3>
+<ul>
+<li>画像のファイルパスが正しくないとき</li>
+<li>ユーザまたはパッケージ開発者が <code>abort-with-message</code> プリミティヴを用いて意図的にエラーを出したとき</li>
+<li>ゼロ除算を行ったとき</li>
+<li>部分文字列を求める際の範囲外アクセスを行ったとき</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../chapter4/ref.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../chapter11/how-use-debug-option.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../chapter4/ref.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../chapter11/how-use-debug-option.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
