@@ -1,6 +1,6 @@
-# SATySFiのv0.0.5をインストールする
+# SATySFiのv0.0.6をインストールする
 
-GitHubのリポジトリでリリースされているv0.0.5をインストールします。
+GitHubのリポジトリでリリースされているv0.0.6をインストールします。
 
 ## 環境構築
 
@@ -13,8 +13,8 @@ satyrographosをインストールしていれば環境は自動で整ってい�
 リリースされているファイルをダウンロードし、展開します。
 
 ```sh
-curl https://github.com/gfngfn/SATySFi/archive/v0.0.5.zip
-unzip v0.0.5.zip -d SATySFi
+curl https://github.com/gfngfn/SATySFi/archive/v0.0.6.zip
+unzip v0.0.6.zip -d SATySFi
 ```
 
 でSATySFiというフォルダが出来上がります。

@@ -7,7 +7,7 @@
   - [SATySFiをインストールする](./chapter3/install_satysfi.md)
     - [satyrographosでインストールする](./chapter3/install_satysfi_by_satyrographos.md)
     - [HEAD版をインストールする](./chapter3/install_satysfi_at_HEAD.md)
-    - [リリースされているv0.0.5をインストールする](./chapter3/install_satysfi_at_release.md)
+    - [リリースされているv0.0.6をインストールする](./chapter3/install_satysfi_at_release.md)
     - [docker imageを使う](./chapter3/use_docker.md)
     - [ブラウザを使う](./chapter3/use_browser.md)
   - [Hello SATySFi!](./chapter3/hello_satysfi.md)
