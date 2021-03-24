@@ -17,9 +17,9 @@ docker run hello-world
 ## docker-satysfiの基本的な使い方
 
 docker-satysfiは[`amutake/satysfi`](https://hub.docker.com/r/amutake/satysfi)という名前でDocker Hubから提供されています。
-このDockerイメージには`satysfi`コマンドと`satyrographos`コマンドが含まれており、`docker run amutake/satysfi`以降に指定することでこれらのコマンドを利用することができます。
+このDockerイメージには`satysfi`コマンドと`satyrographos`コマンドが含まれており、`docker run amutake/satysfi`以降にこれらのコマンドを指定することで利用することができます。
 
-例えば`satysfi`や`satyrographos`のバージョンを確認したい場合は以下のようにします。
+例えばDockerイメージに含まれている`satysfi`や`satyrographos`のバージョンを確認したい場合は以下のようにします。
 
 ```sh
 docker run amutake/satysfi satysfi --version
@@ -42,7 +42,7 @@ docker run --rm -v $(pwd):/satysfi amutake/satysfi satysfi demo.saty
 
 - `docker run`: Dockerコンテナを実行
 - `--rm`: 終了時にコンテナを削除（省略可）
-- `-v $(pwd):/satysfi`: カレントディレクトリのファイルを`/satysfi`にマウント
+- `-v $(pwd):/satysfi`: カレントディレクトリをコンテナ内の`/satysfi`にマウント
 - `amutake/satysfi`: イメージ名
 - `satysfi demo.saty`: `demo.saty`をコンパイル
 
@@ -56,10 +56,10 @@ docker-satysfiでは`/satysfi`というディレクトリがデフォルトの�
 ### SATySFiのバージョンを指定する
 
 SATySFiの特定のバージョンを使いたい場合はdocker-satysfiを使うと簡単です。
-例えば`v0.0.6`を使いたい場合は、以下のように`amutake/satysfi:0.0.6`と指定します。
+例えば`v0.0.6`を使いたい場合は以下のように`amutake/satysfi:0.0.6`と指定します。
 
 ```sh
-docker run --rm amutake/satysfi:0.0.6 satysfi --version
+docker run amutake/satysfi:0.0.6 satysfi --version
 ```
 
 上記のコマンドを実行すると`SATySFi version 0.0.6`と表示され、確かに`v0.0.6`が使われていることが確認できます。
@@ -89,7 +89,7 @@ docker-satysfiでは、CIなどでの利用でイメージのダウンロード�
 `slim`タグがつけられているイメージは`satysfi`コマンドと`satyrographos`コマンドのみを含むイメージです。
 docker-satysfiでは最も小さいイメージですが、`opam`やOCamlコンパイラは含まれていません。
 
-`opam-slim`タグのイメージには`satysfi`コマンドや`satyrographos`コマンドそして`opam`コマンドが含まれていますが、OCamlコンパイラなど、`satysfi`や`satyrographos`をビルドするのに必要なライブラリは一切含まれていません。しかし通常SATySFiで文書をコンパイルする場合はこれらのOCamlライブラリは必要ないことが多いので、ほとんどのユースケースはこのイメージでカバーできます。なお、2021-03-24時点で`opam-slim`は実験的なイメージであることに注意してください。
+`opam-slim`タグのイメージには`satysfi`コマンドや`satyrographos`コマンドそして`opam`コマンドが含まれていますが、OCamlコンパイラなど、`satysfi`や`satyrographos`をビルドするのに必要なバイナリ・ライブラリは一切含まれていません。しかし通常SATySFiで文書をコンパイルする場合はこれらのOCamlライブラリは必要ないので、ほとんどのユースケースではこのタグの機能で事足ります。なお、2021-03-24時点で`opam-slim`は実験的なイメージであることに注意してください。
 
 以上のように、`slim`や`opam-slim`は機能を削っている代わりに小さいイメージとなっています。
 
