@@ -172,13 +172,65 @@
                     <main>
                         <h1><a class="header" href="#docker-imageを使う" id="docker-imageを使う">docker imageを使う</a></h1>
 <p>Dockerイメージが多くの人によって作成され、公開されています。
-ここでは@amutake氏によって作成されているsatysfi-dockerを紹介します。</p>
-<p>詳しくは「<a href="http://amutake.hatenablog.com/entry/2019/12/03/082528">satysfi-docker を使って SATySFi をお手軽に試す</a>」を読んでください。</p>
-<blockquote>
-<p><strong>note：</strong>
-筆者はDockerを使ったことがほとんどないので解説が書けていません。
-加筆してくれる方を募集しています。</p>
-</blockquote>
+ここでは@amutakeによって作成されている<a href="https://github.com/amutake/docker-satysfi">docker-satysfi</a>を紹介します。</p>
+<h2><a class="header" href="#dockerのインストール" id="dockerのインストール">Dockerのインストール</a></h2>
+<p>まずはDockerをインストールします。
+Dockerのインストール方法については<a href="https://docs.docker.com/get-docker/">Dockerの公式ドキュメント</a>をご覧ください。</p>
+<p>インストールが完了したら以下のコマンドを実行し、<code>Hello from Docker!</code>と表示されることを確認してください。</p>
+<pre><code class="language-sh">docker run hello-world
+</code></pre>
+<h2><a class="header" href="#docker-satysfiの基本的な使い方" id="docker-satysfiの基本的な使い方">docker-satysfiの基本的な使い方</a></h2>
+<p>docker-satysfiは<a href="https://hub.docker.com/r/amutake/satysfi"><code>amutake/satysfi</code></a>という名前でDocker Hubから提供されています。
+このDockerイメージには<code>satysfi</code>コマンドと<code>satyrographos</code>コマンドが含まれており、<code>docker run amutake/satysfi</code>以降にこれらのコマンドを指定することで利用することができます。</p>
+<p>例えばDockerイメージに含まれている<code>satysfi</code>や<code>satyrographos</code>のバージョンを確認したい場合は以下のようにします。</p>
+<pre><code class="language-sh">docker run amutake/satysfi satysfi --version
+docker run amutake/satysfi satyrographos version
+</code></pre>
+<h3><a class="header" href="#文書ファイルをコンパイルする" id="文書ファイルをコンパイルする">文書ファイルをコンパイルする</a></h3>
+<p>ではdocker-satysfiに含まれる<code>satysfi</code>コマンドを使って文書ファイルをコンパイルしてみましょう。なお、<code>satysfi</code>コマンドの詳しい使い方は後述の<a href="./hello_satysfi.html">Hello SATySFi!</a>に書かれているので、ここでは<code>docker</code>コマンドのオプションのみ説明します。</p>
+<p>カレントディレクトリに<code>demo.saty</code>という文書ファイルがあり、この文書ファイルをコンパイルしたい場合、以下のコマンドを実行します。</p>
+<pre><code class="language-sh">docker run --rm -v $(pwd):/satysfi amutake/satysfi satysfi demo.saty
+</code></pre>
+<p>これで<code>demo.pdf</code>というファイルができあがります。</p>
+<p>このコマンドを分解してみると以下のようになります。</p>
+<ul>
+<li><code>docker run</code>: Dockerコンテナを実行</li>
+<li><code>--rm</code>: 終了時にコンテナを削除（省略可）</li>
+<li><code>-v $(pwd):/satysfi</code>: カレントディレクトリをコンテナ内の<code>/satysfi</code>にマウント</li>
+<li><code>amutake/satysfi</code>: イメージ名</li>
+<li><code>satysfi demo.saty</code>: <code>demo.saty</code>をコンパイル</li>
+</ul>
+<p>docker-satysfiでは<code>/satysfi</code>というディレクトリがデフォルトのワーキングディレクトリとして設定されています。
+コンテナ内で実行されるコマンドはこのディレクトリ内で実行されます。</p>
+<p>この例ではホストのカレントディレクトリに<code>demo.saty</code>があるので、<code>-v $(pwd):/satysfi</code>を指定することでコンテナ内から<code>demo.saty</code>が見えるようになり、<code>satysfi demo.saty</code>でコンパイルすることができるようになります。</p>
+<p>コンパイル結果のPDFはコンテナ内の<code>/satysfi</code>に出力されます。<code>/satysfi</code>にはホストのカレントディレクトリがマウントされているので、結果としてPDFはホストのカレントディレクトリに置かれるということになります。</p>
+<h3><a class="header" href="#satysfiのバージョンを指定する" id="satysfiのバージョンを指定する">SATySFiのバージョンを指定する</a></h3>
+<p>SATySFiの特定のバージョンを使いたい場合はdocker-satysfiを使うと簡単です。
+例えば<code>v0.0.6</code>を使いたい場合は以下のように<code>amutake/satysfi:0.0.6</code>と指定します。</p>
+<pre><code class="language-sh">docker run amutake/satysfi:0.0.6 satysfi --version
+</code></pre>
+<p>上記のコマンドを実行すると<code>SATySFi version 0.0.6</code>と表示され、確かに<code>v0.0.6</code>が使われていることが確認できます。</p>
+<h2><a class="header" href="#docker-satysfiの発展的な使い方" id="docker-satysfiの発展的な使い方">docker-satysfiの発展的な使い方</a></h2>
+<h3><a class="header" href="#opamとsatyrographosでライブラリをインストールする" id="opamとsatyrographosでライブラリをインストールする">opamとsatyrographosでライブラリをインストールする</a></h3>
+<p>docker-satysfiには（後述する一部のタグを除いて）<code>opam</code>コマンドと<code>satyrographos</code>コマンドが含まれているため、<code>satyrographos-repo</code>に登録されているSATySFiのライブラリを利用することができます。</p>
+<p>例えば<a href="https://github.com/nyuichi/satysfi-base/"><code>satysfi-base</code></a>をインストールしつつ<code>demo.saty</code>という文書ファイルをコンパイルしたい場合、以下のようにします。</p>
+<pre><code class="language-sh">docker run --rm -v $(pwd):/satysfi amutake/satysfi \
+  sh -c &quot;opam update &amp;&amp; opam install satysfi-base &amp;&amp; satyrographos install &amp;&amp; satysfi demo.saty&quot;
+</code></pre>
+<p>Satyrographosの詳しい使い方については<a href="../chapter4/import_package.html">パッケージの読み込み・インストール</a>を参照してください。</p>
+<h3><a class="header" href="#より小さいサイズのイメージを使う" id="より小さいサイズのイメージを使う">より小さいサイズのイメージを使う</a></h3>
+<p>ここまでの説明で使ってきたイメージは圧縮後で1GB程度という比較的大きいイメージでした。
+これは、OCamlコンパイラや、SATySFi・Satyrographos自体のビルドに必要なライブラリがすべて含まれているためです。</p>
+<p>docker-satysfiでは、CIなどでの利用でイメージのダウンロード時間を少しでも削減したい場合や、機能を削ってもいいので小さいサイズのイメージが使いたい場合のために、<code>slim</code>タグと<code>opam-slim</code>タグが用意されています。</p>
+<p><code>slim</code>タグがつけられているイメージは<code>satysfi</code>コマンドと<code>satyrographos</code>コマンドのみを含むイメージです。
+docker-satysfiでは最も小さいイメージですが、<code>opam</code>やOCamlコンパイラは含まれていません。</p>
+<p><code>opam-slim</code>タグのイメージには<code>satysfi</code>コマンドや<code>satyrographos</code>コマンドそして<code>opam</code>コマンドが含まれていますが、OCamlコンパイラなど、<code>satysfi</code>や<code>satyrographos</code>をビルドするのに必要なバイナリ・ライブラリは一切含まれていません。しかし通常SATySFiで文書をコンパイルする場合はこれらのOCamlライブラリは必要ないので、ほとんどのユースケースではこのタグの機能で事足ります。なお、2021-03-24時点で<code>opam-slim</code>は実験的なイメージであることに注意してください。</p>
+<p>以上のように、<code>slim</code>や<code>opam-slim</code>は機能を削っている代わりに小さいイメージとなっています。</p>
+<p>なお、<code>slim</code>と<code>opam-slim</code>はともに<code>0.0.6-slim</code>や<code>0.0.6-opam-slim</code>と指定することでSATySFiの特定のバージョンで利用することができます。</p>
+<h3><a class="header" href="#satysfiの最新版を使う" id="satysfiの最新版を使う">SATySFiの最新版を使う</a></h3>
+<p>docker-satysfiでは<code>nightly</code>というタグも提供しています。
+これは毎日日本時間9:00にその時点でのSATySFiとSatyrographosの最新版をビルドしているイメージです。</p>
+<p><code>nightly</code>タグは<code>slim</code>タグと同様に<code>satysfi</code>と<code>satyrographos</code>しか含まれていない（<code>opam</code>コマンドが含まれていない）ことに注意してください。</p>
 
                     </main>
 
