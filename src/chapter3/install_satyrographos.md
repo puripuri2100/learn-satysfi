@@ -39,7 +39,7 @@ sudo apt install opam
 
 ```sh
 sudo apt-get update
-sudo apt-get install build-essential git m4 unzip curl
+sudo apt-get install build-essential git m4 unzip curl pkg-config
 sh <(curl -sL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)
 ```
 
