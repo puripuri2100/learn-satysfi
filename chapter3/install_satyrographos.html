@@ -208,11 +208,11 @@ brew install opam
 <p>インストールするOCamlのバージョンは、執筆している2020年6月時点では最新版の4.10.0です。
 SATySFiやsatyrographosのREADMEを読んで必要なバージョンを確かめてください。</p>
 <h4><a class="header" href="#wslなど" id="wslなど">WSLなど</a></h4>
-<pre><code class="language-sh">opam init --comp 4.10.0 --disable-sandboxing
+<pre><code class="language-sh">opam init --comp 4.11.1 --disable-sandboxing
 eval $(opam env)
 </code></pre>
 <h4><a class="header" href="#それ以外" id="それ以外">それ以外</a></h4>
-<pre><code class="language-sh">opam init --comp 4.10.0
+<pre><code class="language-sh">opam init --comp 4.11.1
 eval $(opam env)
 </code></pre>
 <h2><a class="header" href="#外部リポジトリを登録する" id="外部リポジトリを登録する">外部リポジトリを登録する</a></h2>
@@ -226,8 +226,16 @@ opam update
 </code></pre>
 <h2><a class="header" href="#本体をインストールする" id="本体をインストールする">本体をインストールする</a></h2>
 <p>satyrographos本体はOPAMに登録されているため、すぐにインストールすることができます。</p>
-<pre><code>opam install satyrographos
+<pre><code>opam depext satyrographos
+opam install satyrographos
 </code></pre>
+<p>もし</p>
+<pre><code>No switch is currently set. Please use 'opam switch' to set or install a switch
+</code></pre>
+<p>のようなエラーが出た場合は</p>
+<pre><code>opam switch create 4.11.1
+</code></pre>
+<p>をするとエラーが解消されます。</p>
 
                     </main>
 
