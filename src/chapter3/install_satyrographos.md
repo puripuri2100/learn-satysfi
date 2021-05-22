@@ -70,7 +70,7 @@ SATySFiやsatyrographosのREADMEを読んで必要なバージョンを確かめ
 #### WSLなど
 
 ```sh
-opam init --comp 4.10.0 --disable-sandboxing
+opam init --comp 4.11.1 --disable-sandboxing
 eval $(opam env)
 ```
 
@@ -78,7 +78,7 @@ eval $(opam env)
 
 
 ```sh
-opam init --comp 4.10.0
+opam init --comp 4.11.1
 eval $(opam env)
 ```
 
@@ -100,5 +100,21 @@ opam update
 satyrographos本体はOPAMに登録されているため、すぐにインストールすることができます。
 
 ```
+opam depext satyrographos
 opam install satyrographos
 ```
+
+
+もし
+
+```
+No switch is currently set. Please use 'opam switch' to set or install a switch
+```
+
+のようなエラーが出た場合は
+
+```
+opam switch create 4.11.1
+```
+
+をするとエラーが解消されます。
